@@ -293,22 +293,22 @@ table {
 
 th,
 td {
-    padding: 10px 4px;
+    padding: 6px 2px;
     border-bottom: 1px solid var(--glass-border);
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     text-align: center;
-    word-break: keep-all;
+    word-break: break-word;
 }
 
 th {
     color: var(--text-dim);
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
 }
 
 td.team-name {
     text-align: left;
-    min-width: 60px;
+    min-width: 45px;
 }
 
 .relegation-zone {
