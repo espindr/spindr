@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPL 강등 확률 계산기 | EPL Relegation Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00ff88">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EPL 강등 계산기">
+    <link rel="apple-touch-icon" href="icon-512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registered'))
+                    .catch(err => console.log('SW registration failed', err));
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <div class="top-bar">
+            <div class="lang-selector">
+                <button id="btnKO" class="lang-btn active">KO</button>
+                <button id="btnEN" class="lang-btn">EN</button>
+            </div>
+        </div>
+        <header class="app-header">
+            <h1 id="mainTitle" class="glitch" data-text="EPL RELEGATION PREDICTOR">축구 리그 순위 및 확률 예측기</h1>
+            <div class="league-selector">
+                <button id="btnEPL" class="league-btn active">Premier League</button>
+                <button id="btnCHAMPIONSHIP" class="league-btn">Championship</button>
+                <button id="btnK1" class="league-btn">K League 1</button>
+                <button id="btnK2" class="league-btn">K League 2</button>
+            </div>
+            <p id="subtitle" class="subtitle">Monte Carlo 시뮬레이션 기반 예측</p>
+            <button id="installAppBtn" class="install-btn hidden">
+                📱 앱으로 설치하여 독립 실행하기
+            </button>
+        </header>
+
+        <section class="controls-panel card">
+            <div class="last-update">
+                <span id="lblLastUpdate">마지막 업데이트:</span> <span id="lastUpdatedTime">--:--:--</span>
+            </div>
+            <button id="updateBtn" class="primary-btn">
+                <span id="btnSyncText" class="btn-text">데이터 동기화 및 시뮬레이션 실행</span>
+                <span class="btn-loader hidden"></span>
+            </button>
+        </section>
+
+        <section class="results-grid">
+            <div class="standing-table-container card">
+                <h2 id="titleTable">현재 순위 및 강등 확률</h2>
+                <div class="table-wrapper">
+                    <table id="relegationTable">
+                        <thead>
+                            <tr>
+                                <th id="thRank">순위</th>
+                                <th id="thTeam">팀</th>
+                                <th id="thPlayed">경기</th>
+                                <th id="thPts">승점</th>
+                                <th id="thGd">득실</th>
+                                <th id="probHeader1">UCL 확률</th>
+                                <th id="probHeader2">UEL 확률</th>
+                                <th id="probHeader3">강등 확률</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- JS를 통해 데이터가 삽입됨 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="insights-panel card">
+                <h2 id="titleInsight">AI 인사이트</h2>
+                <div id="insightContent" class="insight-content">
+                    <span id="msgInitial">데이터를 업데이트하여 예측 결과를 확인하세요.</span>
+                </div>
+                <div class="progress-container hidden" id="simulationProgress">
+                    <p id="msgSimulating">시뮬레이션 진행 중...</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="app-footer">
+            <p class="disclaimer">본 예측 결과는 오락적 재미를 위한 참고 자료일 뿐, 어떠한 형태의 금융적 조언이나 투자 권유를 포함하지 않습니다.</p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

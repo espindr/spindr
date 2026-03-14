@@ -1,0 +1,29 @@
+{
+    "name": "EPL 강등 확률 계산기",
+    "short_name": "EPL 강등계산기",
+    "description": "Monte Carlo 시뮬레이션 기반 프리미어리그 강등 확률 예측",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "display_override": [
+        "standalone",
+        "window-controls-overlay"
+    ],
+    "orientation": "portrait",
+    "scope": "./",
+    "background_color": "#0a0a12",
+    "theme_color": "#00ff88",
+    "icons": [
+        {
+            "src": "icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
