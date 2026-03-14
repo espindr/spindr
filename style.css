@@ -98,9 +98,9 @@ body {
 }
 
 .lang-btn {
-    padding: 4px 12px;
-    border-radius: 16px;
-    font-size: 0.8em;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.65em;
     border: none;
     background: transparent;
     color: #888;
@@ -122,9 +122,9 @@ body {
 }
 
 .league-btn {
-    padding: 6px 14px;
-    border-radius: 16px;
-    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.65rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.05);
     color: white;
@@ -154,20 +154,20 @@ body {
 }
 
 .app-container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 10px 5px;
 }
 
 .app-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     margin-bottom: 5px;
     background: linear-gradient(90deg, #fff, #60efff, #00ff88);
     -webkit-background-clip: text;
@@ -175,7 +175,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     color: var(--text-dim);
 }
 
@@ -183,9 +183,9 @@ h1 {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .controls-panel {
@@ -235,16 +235,16 @@ h1 {
 .primary-btn {
     background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
     border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
+    border-radius: 6px;
+    padding: 6px 12px;
     color: #000;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 .primary-btn:hover {
@@ -277,10 +277,10 @@ table {
 
 th,
 td {
-    padding: 7px 5px;
+    padding: 4px 3px;
     border-bottom: 1px solid var(--glass-border);
     white-space: nowrap;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
 }
 
 th {
@@ -353,8 +353,8 @@ th {
 }
 
 .disclaimer {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     color: var(--text-dim);
     opacity: 0.7;
-    line-height: 1.4;
+    line-height: 1.2;
 }
